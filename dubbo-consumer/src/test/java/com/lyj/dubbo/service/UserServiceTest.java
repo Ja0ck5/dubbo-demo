@@ -21,9 +21,18 @@ public class UserServiceTest {
 
 	@Test
 	public void testQueryAll() {
-		List<User> list = this.userService.queryAll();
-		for (User user : list) {
-			System.out.println(user);
+		for (int i = 0; i < 100; i++) {
+			List<User> list = this.userService.queryAll();
+			for (User user : list) {
+				System.out.println(user);
+			}
+			
+			try {
+				//每次调用接口后暂停一会
+				Thread.sleep(i * 10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

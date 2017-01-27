@@ -22,4 +22,6 @@
 	<!-- 将具体的实现类加入到Spring容器中 -->
 	<bean id="userServiceImpl" class="com.lyj.dubbo.service.impl.UserServiceImpl"/>
 
+	<!-- 在注册中心自动查找监控 -->
+	<dubbo:monitor protocol="registry"/>
 </beans>

@@ -7,6 +7,12 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.lyj.dubbo</groupId>
+			<artifactId>dubbo-provider-common</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
 		<!-- dubbo采用spring配置方式，所以需要导入spring容器依赖 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -43,8 +49,8 @@
 			<artifactId>zkclient</artifactId>
 			<version>0.1</version>
 		</dependency>
-		
-		
+
+
 	</dependencies>
 	<build>
 		<plugins>
